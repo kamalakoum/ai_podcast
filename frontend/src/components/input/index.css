@@ -1,0 +1,49 @@
+/* Resetting default styles */
+
+.input-wrapper {
+    position: relative;
+  }
+  
+
+  .label-input{
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  .modern-input {
+    width: 25%;
+    height: 30px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    font-size: 16px;
+  }
+  
+  .modern-input:focus {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .modern-input::placeholder {
+    color: #a0a0a0;
+  }
+  
+  /* Optional: Add animation on focus */
+  .modern-input:focus {
+    animation: input-focus-animation 0.3s ease;
+  }
+  
+  @keyframes input-focus-animation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
