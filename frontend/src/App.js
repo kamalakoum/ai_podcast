@@ -5,19 +5,21 @@ import CustomButton from './components/button';
 import Logo from './components/logo';
 import LandingPage from './components/pages/landing';
 import { BrowserRouter,Routes, Route } from 'react-router-dom';
-import Register from './components/pages/auth/register/register';
+import Register from './components/pages/auth/register';
+import Login from './components/pages/auth/login';
 
 
 function App() {
   return (
     <>
-    <TextInput/>
-    {/* <BrowserRouter>
+    {/* <TextInput/> */}
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/register" element={<Register />} />
+        <Route path='/login' element={<Login />}/>
       </Routes>
-    </BrowserRouter> */}
+    </BrowserRouter>
 
       {/* <LandingPage/> */}
       {/* <TextInput type="email" placeholder="Enter Email"/>

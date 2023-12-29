@@ -6,12 +6,15 @@
   
 
   .label-input{
+    margin: 40px 0px;
     margin-bottom: 5px;
     font-weight: bold;
+    color: white;
   }
 
+
   .modern-input {
-    width: 25%;
+    width: 55%;
     height: 30px;
     padding: 10px;
     border: none;
@@ -21,6 +24,7 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
     font-size: 16px;
+    margin: 10px 0px;
   }
   
   .modern-input:focus {

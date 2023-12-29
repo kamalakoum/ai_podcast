@@ -1,0 +1,49 @@
+.register-page {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+.form-container {
+    height: 100vh;
+    width:50vw;
+    /* width: 100%; */
+    background-color:#ffa400 ;
+}
+
+.signup-btn {
+    color: #ffa400;
+}
+
+.title {
+    text-align: center;
+    margin-top: 15%;
+    color: white;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+.center {
+    width: 100%;
+    margin-left: 22% ;
+    margin-top: 10%;
+}
+
+.right-reg {
+    width: 50vw;
+
+}
+
+.btn {
+    margin-top: 20px;
+}
+
+.mark {
+    color: white;
+    font-size: small;
+}
+
+.link-tp {
+    color: #0076ff;
+}
+

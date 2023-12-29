@@ -81,6 +81,11 @@
   
   .btn-right {
     background-color: #ffa400;
+    color: white;
+  }
+
+  .btn-left {
+    color: #ffa400;
   }
   /* Media query for smaller screens */
   @media (max-width: 768px) {
