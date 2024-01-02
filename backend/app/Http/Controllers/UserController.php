@@ -25,4 +25,21 @@ class UserController extends Controller
 
         return response()->json($user);
     }
+
+    public function getUserDetailsById($userId)
+    {
+        $user = User::find($userId);
+
+        if ($user) {
+            return [
+                'first_name' => $user->first_name,
+                'last_name'  => $user->last_name,
+                'email'      => $user->email,
+                'password'   => $user->password,
+            ];
+        } else {
+            return response()->json(['error' => 'User not found'], 404);
+        }
+    }
+
 }
