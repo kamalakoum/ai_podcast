@@ -11,14 +11,15 @@ const Login = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    console.log("Login with:", email, password);
+    // console.log("Login with:", email, password);
     try {
       const user = { email, password };
       const response = await request('/login', 'POST', user);
-      console.log(response);
+      // console.log(response);
        if (response.status === 'success') {
         localStorage.setItem('token', response.authorisation.token);
         localStorage.setItem('user_type_id', response.user.user_type_id);
+        // localStorage.setItem('id', response.user.id);
       }
     } catch (error) {
       console.error('Error during login:', error);

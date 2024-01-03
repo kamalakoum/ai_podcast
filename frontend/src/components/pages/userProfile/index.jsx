@@ -1,111 +1,95 @@
 import React, { useState, useEffect } from 'react';
 import './index.css';
-import TextInput from '../../../input';
-import CustomButton from '../../../button';
+import TextInput from '../../input';
+import CustomButton from '../../button';
 import { Link } from 'react-router-dom';
-import { request } from '../../../../helpers/request';
+import { request } from '../../../helpers/request';
 
 const UserProfile = () => {
-  const [userData, setUserData] = useState({
-    first_name: "",
-    last_name: "",
-    email: "",
-    password: "",
-  });
 
-  // Fetch user data from the API when the component mounts
-  useEffect(() => {
-    const fetchUserData = async () => {
-      try {
-        const response = await request('/api/user/profile'); // Adjust the API endpoint accordingly
-        const { data } = response;
-        setUserData(data); // Assuming your API response has properties like first_name, last_name, email, and password
-      } catch (error) {
-        console.error('Error fetching user data:', error);
-      }
+    const [first_name,setFirstName] = useState("");
+    const [last_name,setLastName] = useState("");
+    const [email,setEmail] = useState("");
+    const [password,setPassword] = useState("");
+
+    const getUserDetails = async () => {
+        try {
+            const token = localStorage.getItem('token');
+            console.log(token);
+            console.log('Authorization'+ `Bearer ${token}`,)
+            const response = await request('/userprofile', 'GET', null, {
+                    'Authorization': `Bearer ${token}`,
+            });
+            console.log('Axios Config:', response.config);
+            
+            // Set the state with user data
+            setFirstName(response.first_name);
+            setLastName(response.last_name);
+            setEmail(response.email);
+            setPassword(response.password);
+            console.log(response);
+            // console.log(response.first_name);
+        } catch (error) {
+            console.error('Error during fetching user details:', error);
+        }
     };
-
-    fetchUserData();
-  }, []);
-
-  const handleUserProfile = async (e) => {
-    e.preventDefault();
-
-    // Send a request to update the user profile
-    try {
-      const response = await request('/api/user/profile', {
-        method: 'PUT',
-        body: JSON.stringify(userData),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-
-      // Handle the response (success or error) as needed
-      console.log('User profile updated successfully:', response);
-    } catch (error) {
-      console.error('Error updating user profile:', error);
-    }
-  };
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setUserData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
+    
+    // Call getUserDetails when the component mounts
+    useEffect(() => {
+        getUserDetails();
+    }, []);
+    
+  
   return (
     <div className='register-page'>
       <div className='form-container'>
-        <form className='form-data' onSubmit={handleUserProfile}>
+        <form className='form-data'>
           <h1 className='title'>User Profile</h1>
           <div className="center">
             <TextInput
               label='First Name'
-              placeholder='Enter your first name'
+              placeholder={first_name}
               type='text'
               name='first_name'
-              value={userData.first_name}
-              onChange={handleInputChange}
+              value={first_name}
+            //   onChange={handleInputChange}
               required
             />
 
             <TextInput
               label='Last Name'
-              placeholder='Enter your last name'
+              placeholder={last_name}
               type='text'
               name='last_name'
-              value={userData.last_name}
-              onChange={handleInputChange}
+              value={last_name}
+            //   onChange={handleInputChange}
             />
 
             <TextInput
               label='Email'
-              placeholder='Enter your email'
+              placeholder={email}
               type='email'
               name='email'
-              value={userData.email}
-              onChange={handleInputChange}
+              value={email}
+            //   onChange={handleInputChange}
             />
 
             <TextInput
               label='Password'
-              placeholder='Enter your password'
+              placeholder={password}
               type='password'
               name='password'
-              value={userData.password}
-              onChange={handleInputChange}
+              value={password}
+            //   onChange={}
             />
 
             <div className='btn'>
               <CustomButton
                 children={'Update Profile'}
-                className="signup-btn"
+                className="update-btn"
                 type="submit"
               />
-              <p className='mark'>Want to logout? <Link to='/logout' className='link-to'>
+              <p className='mark'>Want to logout? <Link to='/' className='link-to'>
                 Log out
               </Link></p>
             </div>

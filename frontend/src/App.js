@@ -7,6 +7,7 @@ import LandingPage from './components/pages/landing';
 import { BrowserRouter,Routes, Route } from 'react-router-dom';
 import Register from './components/pages/auth/register';
 import Login from './components/pages/auth/login';
+import UserProfile from './components/pages/userProfile';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/register" element={<Register />} />
         <Route path='/login' element={<Login />}/>
+        <Route path='/user/profile' element={<UserProfile />}/>
       </Routes>
     </BrowserRouter>
 
