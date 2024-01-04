@@ -14,7 +14,7 @@ class UserController extends Controller
             'first_name' => 'nullable|string|max:50',
             'last_name' => 'nullable|string|max:50',
             'email' => 'nullable|email|unique:users,email,' . $user->id, 
-            'password' => 'nullable|string|min:6',
+            // 'password' => 'nullable|string|min:6',
         ]);
 
         $user = User::findOrFail($user->id);
@@ -26,9 +26,9 @@ class UserController extends Controller
         return response()->json($user);
     }
 
-    public function getUserDetailsById($userId)
+    public function getUserDetails()
     {
-        $user = User::find($userId);
+        $user = auth()->user();
 
         if ($user) {
             return [
@@ -41,5 +41,6 @@ class UserController extends Controller
             return response()->json(['error' => 'User not found'], 404);
         }
     }
+
 
 }

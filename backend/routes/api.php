@@ -18,8 +18,10 @@ use App\Http\Controllers\UserController;
 
 Route::post('/login', [AuthController::class,'login']);
 Route::post('/register', [AuthController::class,'register']);
-Route::post('/user/profile',[UserController::class,'updateProfile']);
-Route::get('/user/profile/{id}',[UserController::class,'getUserDetailsById']);
+// Route::post('/user/profile',[UserController::class,'updateProfile']);
+Route::get('/userprofile', [UserController::class, 'getUserDetails'])->middleware('auth:api');
+
+
 
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     return $request->user();
