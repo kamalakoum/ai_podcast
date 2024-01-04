@@ -1,0 +1,10 @@
+.navbar {
+    display: flex;
+}
+
+
+.home-btn {
+    width:15%;
+    color:#ffa400;
+    right :1;
+}
