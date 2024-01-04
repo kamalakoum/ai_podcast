@@ -1,10 +1,12 @@
 .navbar {
     display: flex;
+    justify-content: flex-end;
 }
 
 
 .home-btn {
-    width:15%;
+    width:8%;
     color:#ffa400;
-    right :1;
+    font-size: medium;
+    
 }
