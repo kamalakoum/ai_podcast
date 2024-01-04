@@ -8,20 +8,21 @@ import { BrowserRouter,Routes, Route } from 'react-router-dom';
 import Register from './components/pages/auth/register';
 import Login from './components/pages/auth/login';
 import UserProfile from './components/pages/userProfile';
+import Home from './components/pages/home';
 
 
 function App() {
   return (
     <>
-    {/* <TextInput/> */}
-    <BrowserRouter>
+    <Home />
+    {/* <BrowserRouter>
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/register" element={<Register />} />
         <Route path='/login' element={<Login />}/>
         <Route path='/user/profile' element={<UserProfile />}/>
       </Routes>
-    </BrowserRouter>
+    </BrowserRouter> */}
 
       {/* <LandingPage/> */}
       {/* <TextInput type="email" placeholder="Enter Email"/>
