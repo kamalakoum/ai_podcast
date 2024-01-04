@@ -18,6 +18,7 @@ use App\Http\Controllers\UserController;
 
 Route::post('/login', [AuthController::class,'login']);
 Route::post('/register', [AuthController::class,'register']);
+Route::post('/logout', [AuthController::class,'logout'])->middleware('auth:api');
 Route::post('/userprofile',[UserController::class,'updateProfile'])->middleware('auth:api');
 Route::get('/userprofile', [UserController::class, 'getUserDetails'])->middleware('auth:api');
 
