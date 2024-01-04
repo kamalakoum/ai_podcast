@@ -54,7 +54,7 @@ const UserProfile = () => {
     
   
   return (
-    <div className='register-page'>
+    <div className='profile-page'>
       <div className='form-container'>
         <form className='form-data' onSubmit={updateUserDetails}>
           <h1 className='title'>User Profile</h1>
