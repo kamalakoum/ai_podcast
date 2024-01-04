@@ -33,6 +33,7 @@
     width: 50vw;
     background-image: url(../../../../assets/ai.png);
     background-size: cover;
+    background-position: center;
 }
 
 .btn {
