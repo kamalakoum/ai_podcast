@@ -22,10 +22,13 @@ const Home = () => {
                  />
             </div>
         </header>
-       <h1>Podcastify</h1>
-       <div>
-        <p>Transform Your RSS Feed into Personalized Podcasts</p>
-       </div>
+        <div className="podcastify-content">
+            <h1>Podcastify</h1>
+            <div>
+                 <p>Transform Your RSS Feed into Personalized Podcasts</p>
+            </div>
+        </div>
+       
       </div>
     );
   };

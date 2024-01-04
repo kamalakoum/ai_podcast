@@ -7,6 +7,12 @@
 .home-btn {
     width:8%;
     color:#ffa400;
-    font-size: medium;
+    font-size: large;
+    margin: 2px;
     
+}
+
+.podcastify-content {
+    margin-top: 8%;
+    text-align: center;
 }
