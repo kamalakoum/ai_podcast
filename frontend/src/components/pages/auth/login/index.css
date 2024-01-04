@@ -20,4 +20,5 @@
 .right-side {
     background-image: url(../../../../assets/ai-podcast.png);
     background-size: cover;
+    background-position: center;
 }
