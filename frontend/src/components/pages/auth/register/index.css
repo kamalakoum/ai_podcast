@@ -31,7 +31,9 @@
 
 .right-reg {
     width: 50vw;
-
+    background-image: url(../../../../assets/ai.png);
+    background-size: cover;
+    background-position: center;
 }
 
 .btn {
@@ -46,4 +48,6 @@
 .link-tp {
     color: #0076ff;
 }
+
+
 
