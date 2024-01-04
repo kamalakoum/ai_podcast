@@ -16,3 +16,8 @@
 .login-btn {
     color: #ffa400;
 }
+
+.right-side {
+    background-image: url(../../../../assets/ai-podcast.png);
+
+}
