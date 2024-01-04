@@ -14,15 +14,16 @@ import Home from './components/pages/home';
 function App() {
   return (
     <>
-    <Home />
-    {/* <BrowserRouter>
+    {/* <Home />. */}
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/register" element={<Register />} />
         <Route path='/login' element={<Login />}/>
         <Route path='/user/profile' element={<UserProfile />}/>
+        <Route path='/home' element={<Home />} />
       </Routes>
-    </BrowserRouter> */}
+    </BrowserRouter>
 
       {/* <LandingPage/> */}
       {/* <TextInput type="email" placeholder="Enter Email"/>
