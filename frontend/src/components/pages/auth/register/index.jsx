@@ -14,13 +14,9 @@ const Register = () => {
 
   const handleRegister = async (e) => {
     e.preventDefault();
-    // console.log("Register with:",first_name,last_name,email,password);
     try {
       const user = {first_name,last_name,email,password};
       const response = await request('/register', 'POST', user);
-
-      // console.log(response);
-
     } catch (error) {
       console.error('Error during registration:', error);
     }
