@@ -20,6 +20,10 @@ const Register = () => {
 
       if (response.status == "success" && response.authorization.token) {
         localStorage.setItem('token', response.authorization.token);
+        setFirstName("");
+        setLastName("");
+        setEmail("");
+        setPassword("");
       }
     } catch (error) {
       console.error('Error during registration:', error);
