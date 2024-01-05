@@ -8,6 +8,8 @@ import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
 
+  const navigate = useNavigate(); 
+
   const [first_name,setFirstName] = useState("");
   const [last_name,setLastName] = useState("");
   const [email,setEmail] = useState("");
@@ -25,6 +27,7 @@ const Register = () => {
         setLastName("");
         setEmail("");
         setPassword("");
+
       }
     } catch (error) {
       console.error('Error during registration:', error);
