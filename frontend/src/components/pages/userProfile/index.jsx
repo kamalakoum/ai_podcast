@@ -104,7 +104,9 @@ const UserProfile = () => {
               />
               <p className='mark'>Want to logout? <Link to='/' className='link-to'>
                 Log out
-              </Link></p>
+              </Link> Or back to home page <Link to='/home' className='link-to'>
+                Home
+              </Link> </p>
             </div>
           </div>
         </form>
