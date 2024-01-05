@@ -26,19 +26,22 @@ By creating an intelligent and customizable podcast experience, we aim to redefi
 <!-- Prototyping -->
 <img src="./readme/title3.svg"/>
 
-> We designed Coffee Express using wireframes and mockups, iterating on the design until we reached the ideal layout for easy navigation and a seamless user experience.
+> We developed the AI Podcast app by creating wireframes and mockups, refining the design through multiple iterations to achieve an intuitive layout for effortless navigation and an immersive user experience.
 
 ### Wireframes
-| Login screen  | Register screen |  Landing screen |
+| Topic Selection  | Customization |  Playback Controls |
 | ---| ---| ---|
-| ![Landing](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) |
+| ![Topic Selection](./readme/demo/1440x1024.png) | ![Customization](./readme/demo/1440x1024.png) | ![Playback Controls](./readme/demo/1440x1024.png) |
 
 ### Mockups
-| Home screen  | Menu Screen | Order Screen |
+| Home Screen  | Generated Audio | Settings |
 | ---| ---| ---|
-| ![Landing](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) |
+| ![Home Screen](./readme/demo/1440x1024.png) | ![Generated Audio](./readme/demo/1440x1024.png) | ![Settings](./readme/demo/1440x1024.png) |
 
 <br><br>
+
+By employing wireframes and mockups, we ensured a visual representation of the app's flow and functionality. The intuitive design allows users to seamlessly navigate through topic selection, customization, and playback controls, creating a satisfying and personalized podcast experience.
+
 
 <!-- Implementation -->
 <img src="./readme/title4.svg"/>
