@@ -4,6 +4,7 @@ import TextInput from '../../../input';
 import CustomButton from '../../../button';
 import { Link } from 'react-router-dom';
 import { request } from '../../../../helpers/request';
+import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
 
