@@ -17,6 +17,10 @@ const Register = () => {
     try {
       const user = {first_name,last_name,email,password};
       const response = await request('/register', 'POST', user);
+
+      if (response.status == "success" && response.authorization.token) {
+        localStorage.setItem('token', response.authorization.token);
+      }
     } catch (error) {
       console.error('Error during registration:', error);
     }
