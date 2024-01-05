@@ -52,13 +52,16 @@ const Home = () => {
         </div>
 
         <div className="topics-container">
-            <div>
-                <p>Choose your topic: </p>
+            <div className="content-container">
+                <div><p>Choose your topic: </p></div>
+                <div>
                 <select>
                     <option value="topic1">Topic 1</option>
                     <option value="topic2">Topic 2</option>
                     <option value="topic3">Topic 3</option>
                 </select>
+                </div>
+                
             </div>
         </div>
       </div>
