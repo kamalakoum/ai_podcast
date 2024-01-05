@@ -14,7 +14,7 @@ import Home from './components/pages/home';
 function App() {
   return (
     <>
-    <Home />.
+    {/* <Home />. */}
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LandingPage />} />

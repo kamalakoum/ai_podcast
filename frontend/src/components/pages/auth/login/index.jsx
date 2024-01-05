@@ -14,10 +14,13 @@ const Login = () => {
     try {
       const user = { email, password };
       const response = await request('/login', 'POST', user);
-       if (response.status === 'success') {
+      if (response.status === 'success') {
+        setEmail("");
+        setPassword("");
         localStorage.setItem('token', response.authorisation.token);
-        // localStorage.setItem('user_type_id', response.user.user_type_id);
-        // localStorage.setItem('id', response.user.id);
+        setTimeout(() => {
+          window.location.reload();
+        }, 0);
       }
     } catch (error) {
       console.error('Error during login:', error);
