@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import './index.css';
 import TextInput from '../../../input';
 import CustomButton from '../../../button';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { request } from '../../../../helpers/request';
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const navigate = useNavigate(); 
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
@@ -21,6 +21,8 @@ const Login = () => {
         setTimeout(() => {
           window.location.reload();
         }, 0);
+
+        navigate('/home');
       }
     } catch (error) {
       console.error('Error during login:', error);
