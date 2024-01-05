@@ -14,7 +14,7 @@ import Home from './components/pages/home';
 function App() {
   return (
     <>
-    {/* <Home />. */}
+    <Home />.
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LandingPage />} />
@@ -24,13 +24,6 @@ function App() {
         <Route path='/home' element={<Home />} />
       </Routes>
     </BrowserRouter>
-
-      {/* <LandingPage/> */}
-      {/* <TextInput type="email" placeholder="Enter Email"/>
-      <CustomButton className="blue">
-        Sign in
-      </CustomButton>
-      <Logo /> */}
     </>
   );
 }
