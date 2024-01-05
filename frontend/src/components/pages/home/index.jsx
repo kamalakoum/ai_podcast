@@ -22,6 +22,11 @@ const Home = () => {
         console.error('Error during logout:', error);
       }
     };
+
+    const handleProfileClick = () => {
+        // Navigate to the /user/profile page
+        navigate('/user/profile');
+      };
   
 
   return (
@@ -37,8 +42,8 @@ const Home = () => {
           <CustomButton
             children={'Logout'}
             className="home-btn"
-            type="button"  // Change the type to "button" to prevent form submission
-            onClick={handleLogout}  // Call the handleLogout function on button click
+            type="button"  
+            onClick={handleLogout} 
           />
         </div>
       </header>
