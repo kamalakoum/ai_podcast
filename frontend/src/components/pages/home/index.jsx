@@ -24,7 +24,6 @@ const Home = () => {
     };
 
     const handleProfileClick = () => {
-        // Navigate to the /user/profile page
         navigate('/user/profile');
       };
   
@@ -36,13 +35,14 @@ const Home = () => {
           <CustomButton
             children={'Profile'}
             className="home-btn"
-            type="submit"
+            // type="submit"
+            onClick={handleProfileClick} 
           />
 
           <CustomButton
             children={'Logout'}
             className="home-btn"
-            type="button"  
+            // type="button"  
             onClick={handleLogout} 
           />
         </div>
