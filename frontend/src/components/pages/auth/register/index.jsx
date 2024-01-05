@@ -23,6 +23,7 @@ const Register = () => {
 
       if (response.status == "success" && response.authorization.token) {
         localStorage.setItem('token', response.authorization.token);
+        navigate('/home');
         setFirstName("");
         setLastName("");
         setEmail("");
