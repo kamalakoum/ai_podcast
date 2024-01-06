@@ -23,3 +23,27 @@
     font-size: 16px;
     margin: 10px 0px;
   }
+
+  .modern-input:focus {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .modern-input::placeholder {
+    color: #a0a0a0;
+  }
+  
+  .modern-input:focus {
+    animation: input-focus-animation 0.3s ease;
+  }
+  
+  @keyframes input-focus-animation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
