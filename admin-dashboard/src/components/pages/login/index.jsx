@@ -11,7 +11,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const user = { email, password };
-      const response = await request('/login', 'POST', user);
+      const response = await request('/adminlogin', 'POST', user);
       if (response.status === 'success') {
         setEmail("");
         setPassword("");
