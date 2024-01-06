@@ -1,0 +1,25 @@
+.login-page {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+.right-side {
+    width: 50vw;
+}
+
+.left-side {
+    width: 50vw;
+    background-color: #ffa400;
+}   
+
+.login-btn {
+    color: #ffa400;
+}
+
+.right-side {
+    background-image: url(../../../assets/admin.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}

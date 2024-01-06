@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import TextInput from '../../input';
 import CustomButton from '../../button';
 import { request } from '../../../helpers/request';
+import './index.css';
 
 const Login = () => {
   const [email, setEmail] = useState("");
