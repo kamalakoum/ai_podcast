@@ -33,3 +33,7 @@
     text-align: center;
     color: white;
 }
+
+.center {
+    transform: translateX(150px);
+}
