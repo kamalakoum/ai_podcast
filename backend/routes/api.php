@@ -22,7 +22,7 @@ Route::post('/logout', [AuthController::class,'logout'])->middleware('auth:api')
 Route::post('/userprofile',[UserController::class,'updateProfile'])->middleware('auth:api');
 Route::get('/userprofile', [UserController::class, 'getUserDetails'])->middleware('auth:api');
 
-
+Route::post('/adminlogin', [UserController::class, 'adminLogin']);
 
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     return $request->user();
