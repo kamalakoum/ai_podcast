@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
-import './index.css';
-import TextInput from '../../../input';
-import CustomButton from '../../../button';
-import { Link, useNavigate } from 'react-router-dom';
-import { request } from '../../../../helpers/request';
+import TextInput from '../../input';
+import CustomButton from '../../button';
+import { request } from '../../../helpers/request';
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate(); 
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
@@ -51,10 +48,6 @@ const Login = () => {
                 className="login-btn"
                 type="submit"
               />
-
-              <p className='mark'>Do not have an account? <Link to='/register' className='link-to'>
-                Sign Up
-              </Link></p>
             </div>
           </div>
         </form>
