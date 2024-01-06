@@ -11,8 +11,13 @@
 .left-side {
     width: 50vw;
     background-color: #ffa400;
+    display: flex;
 }   
 
 .login-btn {
     color: #ffa400;
+}
+
+.center {
+    align-items: center;
 }
