@@ -53,7 +53,7 @@ const Home = () => {
 
         <div className="topics-container">
             <div className="content-container">
-                <div><p>Choose your topic: </p></div>
+                <div className="choose-topics"><p>Choose your topic: </p></div>
                 <div>
                 <select>
                     <option value="topic1">Topic 1</option>
