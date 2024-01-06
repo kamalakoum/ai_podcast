@@ -9,6 +9,7 @@
     background-image: url(../../../assets/admin.png);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: contain;
 }
 
 .left-side {
