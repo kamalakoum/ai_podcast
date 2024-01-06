@@ -37,3 +37,29 @@
     margin-right: 2%;
     width: 150px;
 }
+
+.custom-selector {
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+    padding: 8px;
+    font-size: 14px;
+  }
+  
+  .custom-selector:hover {
+    border-color: #007bff;
+  }
+  
+  .custom-selector:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  .custom-selector option {
+    background-color: #fff;
+    color: #333;
+  }
+
+  
