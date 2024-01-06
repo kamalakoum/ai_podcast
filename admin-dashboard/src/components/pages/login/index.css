@@ -6,6 +6,9 @@
 
 .right-side {
     width: 50vw;
+    background-image: url(../../../assets/admin.png);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .left-side {
