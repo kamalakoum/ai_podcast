@@ -55,7 +55,7 @@ const Home = () => {
             <div className="content-container">
                 <div className="choose-topics"><p>Choose your topic: </p></div>
                 <div>
-                <select>
+                <select className="custom-selector">
                     <option value="topic1">Topic 1</option>
                     <option value="topic2">Topic 2</option>
                     <option value="topic3">Topic 3</option>
