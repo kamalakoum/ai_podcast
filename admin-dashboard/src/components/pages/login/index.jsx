@@ -16,6 +16,9 @@ const Login = () => {
         setEmail("");
         setPassword("");
         localStorage.setItem('token', response.authorisation.token);
+        setTimeout(() => {
+          window.location.reload();
+        }, 0);
       }
     } catch (error) {
       console.error('Error during login:', error);
