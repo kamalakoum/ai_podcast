@@ -16,10 +16,3 @@
 .login-btn {
     color: #ffa400;
 }
-
-.right-side {
-    background-image: url(../../../assets/admin.png);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-}
