@@ -1,6 +1,8 @@
 import React,{useState} from "react";
 
 const AddTopics = () => {
+
+    const [topic, setTopic] = useState("");
     return (
         <div>
             <div className="navbar-container">

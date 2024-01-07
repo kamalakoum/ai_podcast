@@ -2,7 +2,6 @@ import React from "react";
 import './index.css';
 
 const Home = () => {
-    const [topic, setTopic] = useState("");
     return (
         <div className="admin-home">
             <div className="navbar-container">
