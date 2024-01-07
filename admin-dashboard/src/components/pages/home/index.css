@@ -22,6 +22,7 @@
     text-decoration: none;
     color: white;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
 .navbar-container {
@@ -37,4 +38,8 @@
     height: 30%;
     background-image: url(../../../assets/ai-podcast-logo.png);
     background-repeat: no-repeat;
+}
+
+.navbar a:hover {
+    color: #0076FF;
 }
