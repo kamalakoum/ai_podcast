@@ -29,7 +29,7 @@
 }
 
 .navbar a:active {
-    color: #ff8c00;
+    color: #ffa400;
 }
 
 .center-form {
@@ -44,4 +44,8 @@
 .addtopic-title{
     color: #ffa400;
     margin-left: 25%;
+}
+
+.addTopics-btn {
+    background-color: #ffa400;
 }
