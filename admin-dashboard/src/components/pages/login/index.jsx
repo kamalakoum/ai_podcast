@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom';
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
@@ -20,6 +21,8 @@ const Login = () => {
         setTimeout(() => {
           window.location.reload();
         }, 0);
+
+        navigate('/home');
       }
     } catch (error) {
       console.error('Error during login:', error);
