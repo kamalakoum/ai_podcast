@@ -29,3 +29,10 @@
     top: 0;
 }
 
+.logo-container {
+    width: 30%;
+    height: 30%;
+    background-image: url(../../../assets/ai-podcast-logo.png);
+    background-repeat: no-repeat;
+    align-items: center;
+}
