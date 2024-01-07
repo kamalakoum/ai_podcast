@@ -22,25 +22,7 @@ const Home = () => {
             </div>
 
             <div className="logo-container">
-            <form className='form-data' onSubmit={addTopic}>
-          <h1 className='title'>Log in</h1>
-          <div className="center">
-            <TextInput
-              label='Topic'
-              placeholder='Enter your topic'
-              type='text'
-              onChange={(e) => setTopic(e.target.value)}
-            />
-
-            <div className='btn'>
-              <CustomButton
-                children={'Add Topic'}
-                className="addTopics-btn"
-                type="submit"
-              />
-            </div>
-          </div>
-        </form>
+            
             </div>
            
         </div>
