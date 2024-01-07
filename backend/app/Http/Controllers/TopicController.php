@@ -7,7 +7,7 @@ use App\Models\Topic;
 
 class TopicController extends Controller
 {
-    public function create(Request $request)
+    public function createTopic(Request $request)
     {
         $request->validate([
             'topic_name' => 'required|string|max:100',

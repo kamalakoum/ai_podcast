@@ -24,6 +24,7 @@ Route::post('/userprofile',[UserController::class,'updateProfile'])->middleware(
 Route::get('/userprofile', [UserController::class, 'getUserDetails'])->middleware('auth:api');
 
 Route::post('/adminlogin', [UserController::class, 'adminLogin']);
+Route::post('/add/topic', [TopicController::class, 'createTopic']);
 
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     return $request->user();
