@@ -1,4 +1,6 @@
 import React,{useState} from "react";
+import TextInput from "../../input";
+import CustomButton from "../../button";
 
 const AddTopics = () => {
     const [topic, setTopic] = useState("");
