@@ -43,3 +43,7 @@
 .navbar a:hover {
     color: #0076FF;
 }
+
+.navbar a:active {
+    color: #ff8c00; /* Change color on click */
+}
