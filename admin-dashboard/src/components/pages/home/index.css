@@ -1,0 +1,19 @@
+.admin-home {
+    
+}
+
+.list-element {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.element {
+    margin-right: 20px; 
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
