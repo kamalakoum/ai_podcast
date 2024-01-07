@@ -4,6 +4,10 @@ import CustomButton from "../../button";
 
 const AddTopics = () => {
     const [topic, setTopic] = useState("");
+
+    const addTopic = () => {
+        console.log("hello");
+    }
     return (
         <div>
             <div className="navbar-container">
