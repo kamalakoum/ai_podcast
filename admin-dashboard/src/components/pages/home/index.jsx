@@ -13,6 +13,9 @@ const Home = () => {
                         <li className="element">
                             <a href="/add-rss-feed">Add RSS Feed</a>
                         </li>
+                        <li className="element">
+                            <a href="/">Logout</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
