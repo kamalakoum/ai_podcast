@@ -1,7 +1,10 @@
 .admin-home {
     height: 100vh;
     width: 100vw;
-    padding-top: 50px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .list-element {
@@ -34,5 +37,4 @@
     height: 30%;
     background-image: url(../../../assets/ai-podcast-logo.png);
     background-repeat: no-repeat;
-    align-items: center;
 }
