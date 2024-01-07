@@ -19,8 +19,8 @@ const AddTopics = () => {
                 </nav>
             </div>
             
-            <div>
-                
+            <div className="center-form">
+
             </div>
 
         </div>
