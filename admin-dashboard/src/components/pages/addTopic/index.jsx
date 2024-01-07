@@ -2,12 +2,27 @@ import React,{useState} from "react";
 import TextInput from "../../input";
 import CustomButton from "../../button";
 import './index.css';
+import { request } from '../../../helpers/request';
 
 const AddTopics = () => {
-    const [topic, setTopic] = useState("");
+    const [topic_name, setTopic] = useState("");
 
-    const addTopic = () => {
-        console.log("hello");
+    const addTopic = async (e) => {
+        e.preventDefault();
+        try {
+          const topic = {topic_name};
+          const token = localStorage.getItem('token');
+          const response = await request('/add/topic', 'POST', topic,{
+            'Authorization': `Bearer ${token}`,});
+          if (response.message === 'Topic created successfully') {
+            setTopic("");
+            setTimeout(() => {
+              window.location.reload();
+            }, 0);
+          }
+        } catch (error) {
+          console.error('Error during adding topic:', error);
+        }
     }
     return (
         <div>
