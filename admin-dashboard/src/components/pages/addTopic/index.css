@@ -31,3 +31,17 @@
 .navbar a:active {
     color: #ff8c00;
 }
+
+.center-form {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.addtopic-title{
+    color: #ffa400;
+    margin-left: 25%;
+}

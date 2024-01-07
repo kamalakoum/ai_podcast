@@ -29,7 +29,7 @@ const AddTopics = () => {
             
             <div className="center-form">
                 <form className='form-data' onSubmit={addTopic}>
-                    <h1 className='title'>Log in</h1>
+                    <h1 className='addtopic-title'>Add Topic</h1>
                     <div className="center">
                         <TextInput
                         label='Topic'
