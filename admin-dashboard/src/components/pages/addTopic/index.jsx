@@ -30,7 +30,7 @@ const AddTopics = () => {
                 <nav className="navbar">
                     <ul className="list-element">
                         <li className="element">
-                            <a href="/add-topics">Add RSS Feed</a>
+                            <a href="/add-rss-feed">Add RSS Feed</a>
                         </li>
                         <li className="element">
                             <a href="/home">Home</a>
