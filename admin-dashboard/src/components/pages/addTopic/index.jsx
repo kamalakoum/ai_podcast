@@ -32,7 +32,6 @@ const AddTopics = () => {
                     <h1 className='addtopic-title'>Add Topic</h1>
                     <div className="center">
                         <TextInput
-                        label='Topic'
                         placeholder='Enter your topic'
                         type='text'
                         onChange={(e) => setTopic(e.target.value)}
