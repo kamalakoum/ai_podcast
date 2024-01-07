@@ -22,14 +22,14 @@ const Home = () => {
             </div>
 
             <div className="logo-container">
-            <form className='form-data' onSubmit={handleLogin}>
+            <form className='form-data' onSubmit={addTopic}>
           <h1 className='title'>Log in</h1>
           <div className="center">
             <TextInput
-              label='Email'
-              placeholder='Enter your email'
-              type='email'
-              onChange={(e) => setEmail(e.target.value)}
+              label='Topic'
+              placeholder='Enter your topic'
+              type='text'
+              onChange={(e) => setTopic(e.target.value)}
             />
 
             <div className='btn'>
