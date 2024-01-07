@@ -4,6 +4,7 @@ import './index.css';
 const Home = () => {
     return (
         <div className="admin-home">
+            <div className="navbar-container">
             <nav className="navbar">
                 <ul className="list-element">
                     <li className="element">
@@ -14,6 +15,8 @@ const Home = () => {
                     </li>
                 </ul>
             </nav>
+            </div>
+           
         </div>
     );
 };
