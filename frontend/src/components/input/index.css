@@ -1,5 +1,3 @@
-/* Resetting default styles */
-
 .input-wrapper {
     position: relative;
   }
@@ -35,7 +33,6 @@
     color: #a0a0a0;
   }
   
-  /* Optional: Add animation on focus */
   .modern-input:focus {
     animation: input-focus-animation 0.3s ease;
   }
