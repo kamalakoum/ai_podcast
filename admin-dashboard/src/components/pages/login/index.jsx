@@ -22,7 +22,7 @@ const Login = () => {
           window.location.reload();
         }, 0);
 
-        
+        navigate('/home');
       }
     } catch (error) {
       console.error('Error during login:', error);

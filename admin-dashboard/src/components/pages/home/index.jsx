@@ -8,7 +8,7 @@ const Home = () => {
                 <nav className="navbar">
                     <ul className="list-element">
                         <li className="element">
-                            <a href="/add-topics">Add Topics</a>
+                            <a href="/add-topic">Add Topics</a>
                         </li>
                         <li className="element">
                             <a href="/add-rss-feed">Add RSS Feed</a>
