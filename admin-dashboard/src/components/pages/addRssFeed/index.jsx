@@ -1,4 +1,5 @@
 import React from "react";
+import './index.css'
 
 const AddRssFeed = () => {
     return (
@@ -18,6 +19,8 @@ const AddRssFeed = () => {
                     </ul>
                 </nav>
             </div>
+
+
         </div>
     );
 }
