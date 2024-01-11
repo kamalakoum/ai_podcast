@@ -1,6 +1,7 @@
 import React from "react";
 import './index.css'
 import CustomButton from "../../button";
+import TextInput from "../../input";
 
 const AddRssFeed = () => {
     return (
