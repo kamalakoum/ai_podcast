@@ -23,7 +23,12 @@ const AddRssFeed = () => {
             </div>
 
             
-
+            <div className="center-form">
+                <form className='form-data' >
+                    <h1 className='addtopic-title'>Add Topic</h1>
+                    
+                </form>
+            </div>
 
         </div>
     );
