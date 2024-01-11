@@ -25,7 +25,7 @@ const AddRssFeed = () => {
             
             <div className="center-form">
                 <form className='form-data' >
-                    <h1 className='addtopic-title'>Add Topic</h1>
+                    <h1 className='addtopic-title'>Add Rss Feed</h1>
                     
                 </form>
             </div>
