@@ -1,5 +1,6 @@
 import React from "react";
 import './index.css'
+import CustomButton from "../../button";
 
 const AddRssFeed = () => {
     return (
@@ -8,7 +9,7 @@ const AddRssFeed = () => {
                 <nav className="navbar">
                     <ul className="list-element">
                         <li className="element">
-                            <a href="/add-topics">Add Topics</a>
+                            <a href="/add-topic">Add Topics</a>
                         </li>
                         <li className="element">
                             <a href="/home">Home</a>
@@ -19,6 +20,8 @@ const AddRssFeed = () => {
                     </ul>
                 </nav>
             </div>
+
+            
 
 
         </div>
