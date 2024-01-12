@@ -31,3 +31,9 @@
 .navbar a:active {
     color: #ffa400;
 }
+
+.add-rssfeed-btn {
+    background-color: #ffa400;
+    margin-top: 10px;
+    color: white;
+}
