@@ -26,7 +26,15 @@ const AddRssFeed = () => {
             <div className="center-form">
                 <form className='form-data' >
                     <h1 className='addtopic-title'>Add Rss Feed</h1>
-                    
+                    <div className="center">
+                        <TextInput
+                        placeholder='Enter your RSS Feed'
+                        type='text'
+                        onChange={(e) => setTopic(e.target.value)}
+                        />
+
+                        
+                    </div>
                 </form>
             </div>
 
