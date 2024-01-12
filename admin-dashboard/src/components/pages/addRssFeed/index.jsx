@@ -6,6 +6,7 @@ import { request } from "../../../helpers/request";
 
 const AddRssFeed = () => {
     const [topics, setTopics] = useState([]);
+    const [topicId, setTopicId] = useState(null);
 
     useEffect(() => {
       const fetchTopics = async () => {
