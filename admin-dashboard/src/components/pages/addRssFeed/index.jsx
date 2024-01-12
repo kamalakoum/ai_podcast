@@ -50,7 +50,11 @@ const AddRssFeed = () => {
                     <h1 className='addtopic-title'>Add Rss Feed</h1>
                     <div className="center">
                         <select className="topics">
-
+                          {topics.map(topic => (
+                            <option key={topic.id} value={topic.id}>
+                            {topic.topic_name}
+                            </option>
+                         ))}
                         </select>
                         <TextInput
                         placeholder='Enter your RSS Feed'
