@@ -1,21 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import './index.css'
 import CustomButton from "../../button";
 import TextInput from "../../input";
 import { request } from "../../../helpers/request";
 
 const AddRssFeed = () => {
-
-    const getAllTopics = async (e) => {
-        e.preventDefault();
-        try {
-          const token = localStorage.getItem('token');
-          const response = await request('/topics', 'GET',{
-            'Authorization': `Bearer ${token}`,});
-        } catch (error) {
-          console.error('Error during getting topics:', error);
-        }
-    }
 
     return (
         <div>
