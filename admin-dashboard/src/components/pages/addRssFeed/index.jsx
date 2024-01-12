@@ -27,6 +27,12 @@ const AddRssFeed = () => {
   
       fetchTopics();
     }, []);
+
+    const handleTopicChange = (event) => {
+        const selectedTopicId = event.target.value;
+        setTopicId(selectedTopicId);
+    };
+    
     return (
         <div>
             <div className="navbar-container">
