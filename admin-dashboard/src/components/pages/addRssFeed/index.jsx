@@ -32,7 +32,7 @@ const AddRssFeed = () => {
         const selectedTopicId = event.target.value;
         setTopicId(selectedTopicId);
     };
-    
+
     return (
         <div>
             <div className="navbar-container">
@@ -56,7 +56,7 @@ const AddRssFeed = () => {
                 <form className='form-data' >
                     <h1 className='addtopic-title'>Add Rss Feed</h1>
                     <div className="center">
-                        <select className="topics">
+                        <select className="topics" onChange={handleTopicChange}>
                           {topics.map(topic => (
                             <option key={topic.id} value={topic.id}>
                             {topic.topic_name}
