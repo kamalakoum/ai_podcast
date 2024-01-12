@@ -31,7 +31,10 @@ const AddRssFeed = () => {
     const handleTopicChange = (event) => {
         const selectedTopicId = event.target.value;
         setTopicId(selectedTopicId);
+        console.log(selectedTopicId);
     };
+
+    console.log(topicId);
 
     return (
         <div>
