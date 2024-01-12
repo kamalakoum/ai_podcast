@@ -5,7 +5,27 @@ import TextInput from "../../input";
 import { request } from "../../../helpers/request";
 
 const AddRssFeed = () => {
+    const [topics, setTopics] = useState([]);
 
+    useEffect(() => {
+      const fetchTopics = async () => {
+        try {
+          const token = localStorage.getItem('token');
+          const response = await request('/topics', 'GET', null, {
+            'Authorization': `Bearer ${token}`,
+          });
+  
+          if (response.topics) {
+            setTopics(response.topics);
+            console.log(response.topics);
+          }
+        } catch (error) {
+          console.error('Error during fetching topics:', error);
+        }
+      };
+  
+      fetchTopics();
+    }, []);
     return (
         <div>
             <div className="navbar-container">
