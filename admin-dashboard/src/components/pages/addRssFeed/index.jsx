@@ -30,9 +30,14 @@ const AddRssFeed = () => {
                         <TextInput
                         placeholder='Enter your RSS Feed'
                         type='text'
-                        onChange={(e) => setTopic(e.target.value)}
                         />
-
+                        <div className='btn'>
+                            <CustomButton
+                                children={'Add RSS Feed'}
+                                className="add-rssfeed-btn"
+                                type="submit"
+                            />
+                        </div>
                         
                     </div>
                 </form>
