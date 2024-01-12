@@ -49,6 +49,9 @@ const AddRssFeed = () => {
                 <form className='form-data' >
                     <h1 className='addtopic-title'>Add Rss Feed</h1>
                     <div className="center">
+                        <select className="topics">
+
+                        </select>
                         <TextInput
                         placeholder='Enter your RSS Feed'
                         type='text'
