@@ -25,6 +25,7 @@ Route::get('/userprofile', [UserController::class, 'getUserDetails'])->middlewar
 
 Route::post('/adminlogin', [UserController::class, 'adminLogin']);
 Route::post('/add/topic', [TopicController::class, 'createTopic'])->middleware('auth:api');
+Route::get('/topics', [TopicController::class, 'getAllTopics'])->middleware('auth:api');
 
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     return $request->user();

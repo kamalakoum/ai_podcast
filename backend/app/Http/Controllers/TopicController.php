@@ -27,4 +27,13 @@ class TopicController extends Controller
         }
         
     }
+
+    public function getAllTopics(){
+        $user = Auth::user();
+        if($user && $user->user_type_id === 2){
+            $topics = Topic::all();
+
+            return response()->json(['topics' => $topics], 200);
+        }
+    }
 }
