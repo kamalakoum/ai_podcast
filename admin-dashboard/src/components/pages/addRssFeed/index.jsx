@@ -7,6 +7,8 @@ import { request } from "../../../helpers/request";
 const AddRssFeed = () => {
     const [topics, setTopics] = useState([]);
     const [topicId, setTopicId] = useState(null);
+    const [source, setSource] = useState("");
+    const [url, setURL] = useState("");
 
     useEffect(() => {
       const fetchTopics = async () => {
@@ -31,10 +33,8 @@ const AddRssFeed = () => {
     const handleTopicChange = (event) => {
         const selectedTopicId = event.target.value;
         setTopicId(selectedTopicId);
-        console.log(selectedTopicId);
     };
 
-    console.log(topicId);
 
     return (
         <div>
@@ -68,6 +68,10 @@ const AddRssFeed = () => {
                         </select>
                         <TextInput
                         placeholder='Enter your RSS Feed'
+                        type='text'
+                        />
+                        <TextInput
+                        placeholder='Enter source'
                         type='text'
                         />
                         <div className='btn'>
