@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\TopicController;
-
+use App\Http\Controllers\RssFeedController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -27,6 +27,7 @@ Route::post('/adminlogin', [UserController::class, 'adminLogin']);
 Route::post('/add/topic', [TopicController::class, 'createTopic'])->middleware('auth:api');
 Route::get('/topics', [TopicController::class, 'getAllTopics'])->middleware('auth:api');
 
+Route::post('/addRssFeed',[RssFeedController::class,"createRssFeed"])->middleware('auth:api');
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     return $request->user();
 // });
