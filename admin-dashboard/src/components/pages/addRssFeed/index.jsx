@@ -6,7 +6,7 @@ import { request } from "../../../helpers/request";
 
 const AddRssFeed = () => {
     const [topics, setTopics] = useState([]);
-    const [topicId, setTopicId] = useState(null);
+    const [topic_id, setTopicId] = useState(null);
     const [source, setSource] = useState("");
     const [url, setURL] = useState("");
 
@@ -35,6 +35,26 @@ const AddRssFeed = () => {
         setTopicId(selectedTopicId);
     };
 
+    const addRssFeed = async (e) => {
+        e.preventDefault();
+        try {
+          const data = {topic_id, source, url};
+          const token = localStorage.getItem('token');
+          const response = await request('/addRssFeed', 'POST', data,{
+            'Authorization': `Bearer ${token}`,});
+          if (response.message === 'RssFeed created successfully') {
+            setSource("");
+            setURL("");
+            setTopicId(null);
+            setTimeout(() => {
+              window.location.reload();
+            }, 0);
+          }
+        } catch (error) {
+          console.error('Error during adding rss-feed:', error);
+        }
+      };
+
 
     return (
         <div>
@@ -56,7 +76,7 @@ const AddRssFeed = () => {
 
             
             <div className="center-form">
-                <form className='form-data' >
+                <form className='form-data' onSubmit={addRssFeed}>
                     <h1 className='addtopic-title'>Add Rss Feed</h1>
                     <div className="center">
                         <select className="topics" onChange={handleTopicChange}>
@@ -67,12 +87,14 @@ const AddRssFeed = () => {
                          ))}
                         </select>
                         <TextInput
-                        placeholder='Enter your RSS Feed'
+                        placeholder='Enter URL for rss-feed'
                         type='text'
+                        onChange={(e) => setURL(e.target.value)}
                         />
                         <TextInput
                         placeholder='Enter source'
                         type='text'
+                        onChange={(e) => setSource(e.target.value)}
                         />
                         <div className='btn'>
                             <CustomButton
