@@ -23,6 +23,8 @@ const Login = () => {
         }, 0);
 
         navigate('/home');
+      }else {
+        console.error('Unexpected response format:', response);
       }
     } catch (error) {
       console.error('Error during login:', error);
