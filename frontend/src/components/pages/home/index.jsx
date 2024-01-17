@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect ,useState} from "react";
 import './index.css';
 import CustomButton from "../../button";
 import { useNavigate } from "react-router-dom"; 
@@ -6,6 +6,28 @@ import { request } from '../../../helpers/request';
 
 const Home = () => {
     const navigate = useNavigate(); 
+    const [topics, setTopics] = useState([]);
+    const [user_topic , setUserTopic] = useState("");
+
+    useEffect(() => {
+      const fetchTopics = async () => {
+        try {
+          const token = localStorage.getItem('token');
+          const response = await request('/topics', 'GET', null, {
+            'Authorization': `Bearer ${token}`,
+          });
+  
+          if (response.topics) {
+            setTopics(response.topics);
+            console.log(response.topics);
+          }
+        } catch (error) {
+          console.error('Error during fetching topics:', error);
+        }
+      };
+  
+      fetchTopics();
+    }, []);
 
     const handleLogout = async () => {
       try {
@@ -26,6 +48,12 @@ const Home = () => {
     const handleProfileClick = () => {
         navigate('/user/profile');
       };
+
+    const handleUserTopic = (e) => {
+      const user_topic = e.target.value;
+      setUserTopic(user_topic);
+      console.log(user_topic);
+    }
   
 
   return (
@@ -55,10 +83,12 @@ const Home = () => {
             <div className="content-container">
                 <div className="choose-topics"><p>Choose your topic: </p></div>
                 <div>
-                <select className="custom-selector">
-                    <option value="topic1">Topic 1</option>
-                    <option value="topic2">Topic 2</option>
-                    <option value="topic3">Topic 3</option>
+                <select className="custom-selector" onChange={handleUserTopic}>
+                    {topics.map(topic => (
+                            <option key={topic.id} value={topic.id}>
+                            {topic.topic_name}
+                            </option>
+                         ))}
                 </select>
                 </div>
                 
